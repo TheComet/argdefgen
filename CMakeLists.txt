@@ -13,8 +13,7 @@ file (MAKE_DIRECTORY "${PROJECT_BINARY_DIR}/include/argdefgen")
 bison_target (adg_parser
     "${PROJECT_SOURCE_DIR}/src/parser.y"
     "${PROJECT_BINARY_DIR}/src/parser.y.c"
-    DEFINES_FILE "${PROJECT_BINARY_DIR}/include/argdefgen/parser.y.h"
-    COMPILE_FLAGS -Wcounterexamples)
+    DEFINES_FILE "${PROJECT_BINARY_DIR}/include/argdefgen/parser.y.h")
 flex_target (adg_scanner
     "${PROJECT_SOURCE_DIR}/src/scanner.lex"
     "${PROJECT_BINARY_DIR}/src/scanner.lex.c"
